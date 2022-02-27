@@ -10,4 +10,4 @@ const Sidebar = () => {
   );
 };
 
-export default Navbar;
+export default Sidebar;

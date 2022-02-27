@@ -100,25 +100,47 @@ a {
 
 .sidebar {
   grid-area: sidebar;
-  background-color: #61dafb;
 }
 .info {
   grid-area: info;
-  background-color: rgb(31, 63, 52);
+  border: 2px solid white;
 }
 .header {
-  background-color: beige;
+  border: 2px solid white;
   grid-area: header;
 }
 .section1 {
   grid-area: section1;
-  background-color: rgb(165, 165, 16);
+  border: 2px solid white;
 }
 .footer {
   grid-area: footer;
-  background-color: darkred;
+  border: 2px solid white;
 }
+.sideBarFlex {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
 
+  height: 100%;
+  width: 100%;
+}
+.map {
+  height: 30%;
+  width: 90%;
+  border: 2px solid white;
+}
+.weapon {
+  height: 30%;
+  width: 90%;
+  border: 2px solid white;
+}
+.character {
+  height: 30%;
+  width: 90%;
+  border: 2px solid white;
+}
 .App-link {
   color: #61dafb;
 }
