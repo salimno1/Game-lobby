@@ -72,6 +72,12 @@ input {
 a {
   color: #ffffffe1;
 }
+.password-icon {
+  color: #ffffff;
+  position: absolute;
+  top: 38.5%;
+  right: 10%;
+}
 
 .App-link {
   color: #61dafb;
