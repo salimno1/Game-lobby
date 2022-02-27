@@ -24,7 +24,7 @@ h3 {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 50px;
-  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 0.5rem 0 rgba(0, 0, 0, 0.2);
 }
 input {
   color: #ffffff;
@@ -48,7 +48,7 @@ input {
   flex-direction: column;
   border-radius: 20px;
   color: rgb(0, 0, 0);
-  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.8);
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(15px);
 }
 .registerBtn {
