@@ -78,6 +78,12 @@ a {
   top: 38.5%;
   right: 10%;
 }
+.password-icon2 {
+  color: #ffffff;
+  position: absolute;
+  right: 10%;
+  bottom: 49%;
+}
 
 .App-link {
   color: #61dafb;

@@ -6,7 +6,7 @@ import LoginInput from "./Pages/login";
 function App() {
   return (
     <div className="App">
-      <LoginInput />
+      <RegisterInput />
     </div>
   );
 }
