@@ -1,24 +1,50 @@
 import React from "react";
 import { useState } from "react";
-import { AiFillEyeInvisible } from "react-icons/ai";
-import { AiFillEye } from "react-icons/ai";
-const RegisterInput = () => {
+import { AiFillEyeInvisible, AiFillEye } from "react-icons/ai";
+
+const RegisterInput = ({ login, error }) => {
+  const [details, setDetails] = useState({
+    name: "",
+    password: "",
+    password2: "",
+    email: "",
+  });
+
+  const submitHandler = (e) => {
+    e.preventDefault();
+    login(details);
+  };
   const [visible, setVisibility] = useState(false);
-  const icon = <AiFillEye />;
+
   const inputType = visible ? "text" : "password";
   return (
     <div className="register-form">
-      <h3>Register New Account</h3>
-      <form>
-        <input type="text" name="email" placeholder="Email*" required />
+      <form onSubmit={submitHandler}>
+        <input
+          type="text"
+          name="email"
+          placeholder="Email*"
+          onChange={(e) => setDetails({ ...details, email: e.target.value })}
+          value={details.email}
+          required
+        />
         <br />
-        <input type="text" name="username" placeholder="Username*" required />
+        <input
+          type="text"
+          name="username"
+          placeholder="Username*"
+          onChange={(e) => setDetails({ ...details, name: e.target.value })}
+          value={details.name}
+          required
+        />
         <br />
 
         <input
           type={inputType}
           name="password"
           placeholder="Password*"
+          onChange={(e) => setDetails({ ...details, password: e.target.value })}
+          value={details.password}
           required
         />
         <br />
@@ -26,13 +52,17 @@ const RegisterInput = () => {
           type={inputType}
           name="password2"
           placeholder="Repeat Password*"
+          onChange={(e) =>
+            setDetails({ ...details, password2: e.target.value })
+          }
+          value={details.password2}
         />
         <br />
         <span
           className="password-icon2"
-          onClick={() => setVisibility((visibility) => !visibility)}
+          onClick={() => setVisibility(!visible)}
         >
-          {icon}
+          {visible ? <AiFillEye /> : <AiFillEyeInvisible />}
         </span>
 
         <input className="registerBtn" type="submit" value="Sign up" />
