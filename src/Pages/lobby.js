@@ -1,6 +1,6 @@
 import React from "react";
 const Lobby = () => {
-  return <div className="lobby"></div>;
+  return <div className="container"></div>;
 };
 
 export default Lobby;
