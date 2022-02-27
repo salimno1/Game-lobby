@@ -38,7 +38,9 @@ input {
 ::placeholder {
   color: #ffffffb6;
 }
-
+form {
+  margin-top: 100px;
+}
 .register-form {
   padding-top: 50px;
   height: 500px;
@@ -48,7 +50,7 @@ input {
   border-radius: 20px;
   color: rgb(0, 0, 0);
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(15px);
+  backdrop-filter: blur(10px);
 }
 .registerBtn {
   margin-top: 50px;
@@ -76,7 +78,14 @@ a {
   color: #ffffff;
   position: absolute;
   right: 10%;
-  bottom: 51%;
+  bottom: 50%;
+}
+
+.lobby {
+  width: 180vh;
+  height: 90vh;
+  background-color: rgba(0, 0, 0, 0.603);
+  box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.5);
 }
 
 .App-link {
