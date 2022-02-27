@@ -19,12 +19,11 @@
 h3 {
   font-family: "Courier New", Courier, monospace;
   color: rgb(255, 255, 255);
-  background-color: rgba(255, 255, 255, 0.082);
+
   width: 80%;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 50px;
-  box-shadow: 0 0 0.5rem 0 rgba(0, 0, 0, 0.2);
 }
 input {
   color: #ffffff;

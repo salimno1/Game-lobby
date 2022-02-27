@@ -16,11 +16,11 @@ const LoginInput = () => {
 
         <br />
 
-        <input className="registerBtn" type="submit" />
+        <input className="registerBtn" type="submit" value="Login" />
       </form>
       <div className="regAccount">
         <p>Dont have a account?</p>
-        <a href="/">Register here!</a>
+        <a href="/">Sign up here!</a>
       </div>
     </div>
   );

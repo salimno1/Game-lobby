@@ -35,7 +35,7 @@ const RegisterInput = () => {
           {icon}
         </span>
 
-        <input className="registerBtn" type="submit" />
+        <input className="registerBtn" type="submit" value="Sign up" />
       </form>
     </div>
   );
