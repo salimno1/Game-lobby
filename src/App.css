@@ -42,14 +42,14 @@ input {
 
 .register-form {
   padding-top: 50px;
-  height: 50vh;
-  width: 50vh;
+  height: 500px;
+  width: 500px;
   display: flex;
   flex-direction: column;
   border-radius: 20px;
   color: rgb(0, 0, 0);
   box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.8);
-  backdrop-filter: blur(50px);
+  backdrop-filter: blur(15px);
 }
 .registerBtn {
   margin-top: 50px;
@@ -72,17 +72,12 @@ input {
 a {
   color: #ffffffe1;
 }
-.password-icon {
-  color: #ffffff;
-  position: absolute;
-  top: 38.5%;
-  right: 10%;
-}
+
 .password-icon2 {
   color: #ffffff;
   position: absolute;
   right: 10%;
-  bottom: 49%;
+  bottom: 51%;
 }
 
 .App-link {
