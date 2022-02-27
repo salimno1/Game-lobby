@@ -1,8 +1,8 @@
 import React from "react";
 
-const Navbar = () => {
+const Sidebar = () => {
   return (
-    <div className="navbar">
+    <div className="sideBarFlex">
       <div className="character"></div>
       <div className="weapon"></div>
       <div className="map"></div>

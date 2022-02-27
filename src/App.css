@@ -91,14 +91,32 @@ a {
   grid-template-rows: auto;
   grid-template-areas:
     "header header header header"
-    "sidebar content content content"
-    "sidebar content content content"
-    "sidebar content content content"
+    "sidebar info info info"
+    "sidebar info info info"
+    "sidebar info info info"
+    "sidebar section1 section1 section1"
     "footer footer footer footer";
 }
 
-.navbar {
+.sidebar {
+  grid-area: sidebar;
   background-color: #61dafb;
+}
+.info {
+  grid-area: info;
+  background-color: rgb(31, 63, 52);
+}
+.header {
+  background-color: beige;
+  grid-area: header;
+}
+.section1 {
+  grid-area: section1;
+  background-color: rgb(165, 165, 16);
+}
+.footer {
+  grid-area: footer;
+  background-color: darkred;
 }
 
 .App-link {
