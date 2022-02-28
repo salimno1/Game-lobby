@@ -6,28 +6,49 @@ import c5 from "../img/c7.gif";
 import c6 from "../img/c8.gif";
 
 export const avatars = [
-  { name: "Daniel", image: c1, id: "1", country: "Sweden", speciality: "fast" },
   {
-    name: "Mike",
-    image: c2,
-    id: "2",
-    country: "Ethiopia",
-    speciality: "Strong",
+    name: "Daniel Ivarsson",
+    image: c1,
+    id: "1",
+    country: "Sweden",
+
+    skill: "Fast reload",
   },
   {
-    name: "Mufasa",
+    name: "Esteban Garcia",
+    image: c2,
+    id: "2",
+    country: "Mexico",
+    skill: "Fast runner",
+  },
+  {
+    name: "Andrei Abramovic",
     image: c3,
     id: "3",
     country: "Russia",
-    speciality: "Smart",
+
+    skill: "Extra armor",
   },
-  { name: "Putin", image: c4, id: "4", country: "Usa", speciality: "Flexible" },
   {
-    name: "Obama",
+    name: "Corey Scott",
+    image: c4,
+    id: "4",
+    country: "Usa",
+
+    skill: "Silent footsteps",
+  },
+  {
+    name: "Musa Adeyemi",
     image: c5,
     id: "5",
-    country: "Ukraine",
-    speciality: "Medic",
+    country: "Nigeria",
+    skill: "Invincible against UAV's",
   },
-  { name: "Saddam", image: c6, id: "6", country: "Kina", speciality: "Leader" },
+  {
+    name: "Hussein Abu Hassan",
+    image: c6,
+    id: "6",
+    country: "Iran",
+    skill: "Extra Ammo",
+  },
 ];

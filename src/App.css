@@ -205,10 +205,13 @@ a {
   width: 50%;
   text-align: left;
 }
-.story h3 {
+.story h3,
+h5,
+p {
   color: #e0e0e0;
   text-align: left;
-  margin-left: 0;
+  margin: 0;
+  margin-bottom: 2px;
 }
 .header {
   grid-area: header;

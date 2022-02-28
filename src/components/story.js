@@ -10,12 +10,13 @@ const Background = (props) => {
         <img className="bodyPic" src={soldier && soldier.image} alt="" />
       </div>
       <div className="soldierText">
-        {" "}
-        <h3>{soldier.name}</h3>
-        <h4>speciality:{soldier.speciality}</h4>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus
-        suscipit qui quos, voluptates est fuga quam! Minima doloremque, tempori
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga labore
+        <h2>{soldier.name}</h2>
+        <h5>Country: </h5>
+        <p>{soldier.country}</p>
+        <h5>Skill: </h5>
+        {soldier.skill}
+
+        <h5>Skill: </h5>
       </div>
     </div>
   );
