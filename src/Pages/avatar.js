@@ -16,14 +16,14 @@ export const avatars = [
   },
   {
     name: "Esteban Garcia",
-    image: c2,
+    image: c6,
     id: "2",
     country: "Mexico",
     skill: "Fast runner",
   },
   {
     name: "Andrei Abramovic",
-    image: c3,
+    image: c4,
     id: "3",
     country: "Russia",
 
@@ -31,7 +31,7 @@ export const avatars = [
   },
   {
     name: "Corey Scott",
-    image: c4,
+    image: c3,
     id: "4",
     country: "Usa",
 
@@ -46,7 +46,7 @@ export const avatars = [
   },
   {
     name: "Hussein Abu Hassan",
-    image: c6,
+    image: c2,
     id: "6",
     country: "Iran",
     skill: "Extra Ammo",

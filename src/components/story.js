@@ -14,9 +14,7 @@ const Background = (props) => {
         <h5>Country: </h5>
         <p>{soldier.country}</p>
         <h5>Skill: </h5>
-        {soldier.skill}
-
-        <h5>Skill: </h5>
+        <p>{soldier.skill}</p>
       </div>
     </div>
   );
