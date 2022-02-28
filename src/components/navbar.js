@@ -3,16 +3,17 @@ import weapinPic from "../img/gunn.jpeg";
 import char from "../img/char.jpeg";
 import map from "../img/maps.jpeg";
 
-const Sidebar = () => {
+const Sidebar = (props) => {
+  const { onClick } = props;
   return (
     <div className="sideBarFlex">
-      <div className="character">
+      <div className="character" onClick={() => onClick(1)}>
         <img className="imgChar" src={char} alt="" />
       </div>
-      <div className="weapon">
+      <div className="weapon" onClick={() => onClick(2)}>
         <img className="imgWeapon" src={weapinPic} alt="" />
       </div>
-      <div className="map">
+      <div className="map" onClick={() => onClick(3)}>
         <img className="imgMap" src={map} alt="" />
       </div>
     </div>
