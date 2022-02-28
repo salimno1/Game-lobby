@@ -166,6 +166,9 @@ a {
   width: 100%;
   border-bottom: #680000 solid 2px;
 }
+.c1 :hover {
+  border-bottom: #ffffff solid 4px;
+}
 .info {
   grid-area: info;
   background-color: #000000b6;
@@ -198,9 +201,9 @@ a {
   text-align: left;
 }
 .story h3 {
-  margin-top: 50px;
   color: #e0e0e0;
-  text-align: center;
+  text-align: left;
+  margin-left: 0;
 }
 .header {
   grid-area: header;
