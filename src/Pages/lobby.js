@@ -1,5 +1,5 @@
 import React from "react";
-import Sidebar from "./components/navbar";
+import Sidebar from "../components/navbar";
 const Lobby = () => {
   return (
     <div className="container">

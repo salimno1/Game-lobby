@@ -84,7 +84,7 @@ a {
 .container {
   width: 180vh;
   height: 90vh;
-  background-color: rgba(0, 0, 0, 0.603);
+  background-color: rgba(47, 57, 148, 0.096);
   box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.5);
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -103,43 +103,67 @@ a {
 }
 .info {
   grid-area: info;
-  border: 2px solid white;
 }
 .header {
-  border: 2px solid white;
   grid-area: header;
 }
 .section1 {
   grid-area: section1;
-  border: 2px solid white;
 }
 .footer {
   grid-area: footer;
-  border: 2px solid white;
 }
 .sideBarFlex {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
+  gap: 15px;
   align-items: center;
 
   height: 100%;
   width: 100%;
 }
 .map {
-  height: 30%;
+  height: 20%;
   width: 90%;
-  border: 2px solid white;
+  border-radius: 10px;
+  box-shadow: rgba(255, 255, 255, 0.877) 0px 1px 6px,
+    rgba(17, 17, 26, 0.438) 0px 1px 1px, rgba(17, 17, 26, 0.1) 0px 4px 6px;
+}
+.imgMap {
+  border-radius: 10px;
+  height: 100%;
+  width: 100%;
+  object-position: bottom;
+  object-fit: cover;
 }
 .weapon {
-  height: 30%;
+  border-radius: 10px;
+  height: 20%;
   width: 90%;
-  border: 2px solid white;
+  box-shadow: rgba(255, 255, 255, 0.877) 0px 1px 6px,
+    rgba(17, 17, 26, 0.438) 0px 1px 1px, rgba(17, 17, 26, 0.1) 0px 4px 6px;
+}
+.imgWeapon {
+  border-radius: 10px;
+  height: 100%;
+  width: 100%;
+  object-position: ;
+  object-fit: cover;
 }
 .character {
-  height: 30%;
+  height: 20%;
   width: 90%;
-  border: 2px solid white;
+  border-radius: 10px;
+  box-shadow: rgba(255, 255, 255, 0.877) 0px 1px 6px,
+    rgba(17, 17, 26, 0.438) 0px 1px 1px, rgba(17, 17, 26, 0.1) 0px 4px 6px;
+}
+.imgChar {
+  border-radius: 10px;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: top;
 }
 .App-link {
   color: #61dafb;
