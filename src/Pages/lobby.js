@@ -3,6 +3,7 @@ import Sidebar from "../components/navbar";
 import ReactAudioPlayer from "react-audio-player";
 import sound from "../mp3/sound2.mp3";
 import Info from "../components/info";
+import Background from "../components/story";
 const Lobby = () => {
   return (
     <div className="container">
@@ -12,6 +13,7 @@ const Lobby = () => {
       </div>
       <div className="info">
         <Info />
+        <Background />
       </div>
       <div className="section1"></div>
       <div className="footer"></div>

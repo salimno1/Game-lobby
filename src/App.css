@@ -82,8 +82,8 @@ a {
 }
 
 .container {
-  width: 180vh;
-  height: 90vh;
+  width: 1300px;
+  height: 700px;
   background-color: rgba(47, 57, 148, 0.096);
   box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.5);
   display: grid;
@@ -158,28 +158,49 @@ a {
 .charContainer {
   display: flex;
   justify-content: center;
-
+  padding: 50px;
   width: 100%;
+  height: 5px;
 }
 .img-c1 {
   width: 100%;
-  border-left: #000000 solid 1px;
+  border-bottom: #680000 solid 2px;
 }
 .info {
   grid-area: info;
-
+  background-color: #000000b6;
+  margin-top: 80px;
+  border-radius: 20px;
+  width: 900px;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  height: 500px;
+  flex-direction: column;
 }
 .infoContent {
   display: flex;
-  background-color: #00000096;
+  flex-direction: row;
 
-  margin-top: 12.5%;
-  height: 90%;
-  width: 95%;
-  border-radius: 20px;
+  height: 300px;
+}
+.story {
+  margin-top: 50px;
+  height: 100%;
+  color: #e0e0e0;
+  display: flex;
+  justify-content: space-evenly;
+}
+.soldierPic {
+  margin-top: 20px;
+  width: 50%;
+}
+.soldierText {
+  width: 50%;
+  text-align: left;
+}
+.story h3 {
+  margin-top: 50px;
+  color: #e0e0e0;
+  text-align: center;
 }
 .header {
   grid-area: header;
