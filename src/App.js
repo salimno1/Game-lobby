@@ -1,6 +1,6 @@
 import "./App.css";
 import { useState } from "react";
-import ReactAudioPlayer from "react-audio-player";
+
 import RegisterInput from "./Pages/registration";
 import LoginInput from "./Pages/login";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -38,8 +38,6 @@ function App() {
           <Route path="signUp" element={<RegisterInput />} />
         </Routes>
       )}
-
-      <ReactAudioPlayer src="./mp3/sound1.mp3" autoPlay />
     </div>
   );
 }

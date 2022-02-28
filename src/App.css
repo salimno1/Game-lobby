@@ -91,7 +91,7 @@ a {
   grid-template-rows: auto;
   grid-template-areas:
     "header header header header"
-    "sidebar info info info"
+    "sidebar info info info "
     "sidebar info info info"
     "sidebar info info info"
     "sidebar section1 section1 section1"
@@ -100,18 +100,6 @@ a {
 
 .sidebar {
   grid-area: sidebar;
-}
-.info {
-  grid-area: info;
-}
-.header {
-  grid-area: header;
-}
-.section1 {
-  grid-area: section1;
-}
-.footer {
-  grid-area: footer;
 }
 .sideBarFlex {
   display: flex;
@@ -136,6 +124,7 @@ a {
   width: 100%;
   object-position: bottom;
   object-fit: cover;
+  border: rgb(0, 0, 0) solid 1px;
 }
 .weapon {
   border-radius: 10px;
@@ -148,7 +137,7 @@ a {
   border-radius: 10px;
   height: 100%;
   width: 100%;
-
+  border: black solid 1px;
   object-fit: cover;
 }
 .character {
@@ -164,7 +153,44 @@ a {
   width: 100%;
   object-fit: cover;
   object-position: top;
+  border: black solid 1px;
 }
+.charContainer {
+  display: flex;
+  justify-content: center;
+
+  width: 100%;
+}
+.img-c1 {
+  width: 100%;
+  border-left: #000000 solid 1px;
+}
+.info {
+  grid-area: info;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.infoContent {
+  display: flex;
+  background-color: #00000096;
+
+  margin-top: 12.5%;
+  height: 90%;
+  width: 95%;
+  border-radius: 20px;
+}
+.header {
+  grid-area: header;
+}
+.section1 {
+  grid-area: section1;
+}
+.footer {
+  grid-area: footer;
+}
+
 .App-link {
   color: #61dafb;
 }
