@@ -83,6 +83,7 @@ a {
 
 .container {
   font-family: "Courier New", Courier, monospace;
+  border-radius: 5px;
   width: 1300px;
   height: 650px;
   background-color: rgba(47, 57, 148, 0.096);
@@ -236,7 +237,7 @@ h5 {
   padding-right: 50px;
 }
 .userfooter {
-  width: 100px;
+  width: 250px;
   height: 50px;
   background-color: #61dafb;
 }
@@ -246,13 +247,13 @@ h5 {
 
   background-color: #f5f5f588;
   padding: 5px;
-  box-shadow: 1px 1px 1px 2px rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(0, 255, 98, 0.918);
 }
 .selectedFooter img {
   width: 40px;
 }
 .gameFooter {
-  width: 100px;
+  width: 150px;
   height: 50px;
   background-color: #020f13;
 }
