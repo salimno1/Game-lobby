@@ -1,7 +1,7 @@
 import React from "react";
 
 const OneCharacter = (props) => {
-  const { image, name, id, select } = props;
+  const { image, id, select } = props;
   return (
     <div className="charContainer">
       <div className="c1">

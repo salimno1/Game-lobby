@@ -7,7 +7,6 @@ const Info = (props) => {
   const avatarList = avatars.map((avatar) => (
     <OneCharacter
       image={avatar.image}
-      name={avatar.name}
       onClick={() => selectAvatar(avatar.id)}
       select={selectAvatar}
       id={avatar.id}

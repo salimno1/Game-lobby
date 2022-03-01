@@ -6,14 +6,11 @@ import Info from "../components/info";
 import Background from "../components/story";
 import { avatars } from "./avatar";
 import Addbtn from "../components/addbutton";
+import Footer from "./footer";
 
 const Lobby = () => {
-  const [addSoldier, setAddSoldier] = useState();
   const [sideBarState, setSideBarState] = useState(1);
-  const [selectedCharacter, setSelectedCharacter] = useState(1);
-  console.log(selectedCharacter);
-  const soldier =
-    selectedCharacter && avatars.find((item) => item.id == selectedCharacter);
+  const [selectedCharacter, setSelectedCharacter] = useState(3);
 
   const showInfoBar = () => {
     if (sideBarState === 1) {
@@ -29,6 +26,7 @@ const Lobby = () => {
       return <div className="info">map</div>;
     }
   };
+
   return (
     <div className="container">
       <div className="header"></div>
@@ -38,7 +36,7 @@ const Lobby = () => {
 
       {showInfoBar()}
 
-      <div className="footer"></div>
+      <Footer selectedSoldier={selectedCharacter} avatars={avatars} />
       <ReactAudioPlayer src={sound} autoPlay loop volume={0.5} />
     </div>
   );

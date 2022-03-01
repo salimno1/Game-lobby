@@ -11,7 +11,6 @@ export const avatars = [
     image: c1,
     id: "1",
     country: "Sweden",
-
     skill: "Fast reload",
   },
   {

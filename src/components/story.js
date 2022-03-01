@@ -7,7 +7,7 @@ const Background = (props) => {
   return (
     <div className="story">
       <div className="soldierPic">
-        <img className="bodyPic" src={soldier && soldier.image} alt="" />
+        <img className="bodyPic" src={soldier.image} alt="" />
       </div>
       <div className="soldierText">
         <h2>{soldier.name}</h2>
