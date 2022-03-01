@@ -82,8 +82,9 @@ a {
 }
 
 .container {
+  font-family: "Courier New", Courier, monospace;
   width: 1300px;
-  height: 700px;
+  height: 600px;
   background-color: rgba(47, 57, 148, 0.096);
   box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.5);
   display: grid;
@@ -172,14 +173,16 @@ a {
   width: 100%;
   border-bottom: #680000 solid 2px;
 }
-
+.c1::after {
+  border-bottom: #ffffff solid 1px;
+}
 .c1 :hover {
   border-bottom: #ffffff solid 1px;
 }
 .info {
   grid-area: info;
-  background-color: #000000b6;
-  margin-top: 80px;
+  background-color: #0000008f;
+  margin-top: 50px;
   border-radius: 20px;
   width: 900px;
   display: flex;
@@ -207,13 +210,13 @@ a {
 }
 .story h3,
 h5 {
-  color: #e0e0e0;
+  color: #f5f5f5;
   text-align: left;
   margin: 0;
   margin-bottom: 2px;
 }
 .story p {
-  color: #e0e0e0;
+  color: #e0e0e0b6;
   text-align: left;
   margin: 0;
   margin-bottom: 10px;
