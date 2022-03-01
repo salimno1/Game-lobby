@@ -33,7 +33,7 @@ const LoginInput = ({ login, error }) => {
 
         <br />
 
-        <input className="reg isterBtn" type="submit" value="Login" />
+        <input className="registerBtn" type="submit" value="Login" />
       </form>
       <div className="regAccount">
         <p>Dont have a account?</p>

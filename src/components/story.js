@@ -13,7 +13,7 @@ const Background = (props) => {
         <h2>{soldier.name}</h2>
         <h5>Country: </h5>
         <p>{soldier.country}</p>
-        <h5>Skill: </h5>
+        <h5>Perk: </h5>
         <p>{soldier.skill}</p>
       </div>
     </div>
