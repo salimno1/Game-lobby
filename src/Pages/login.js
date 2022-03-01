@@ -10,7 +10,7 @@ const LoginInput = ({ login, error }) => {
   };
   return (
     <div className="register-form">
-      <form onSubmit={submitHandler} autocomplete="off">
+      <form onSubmit={submitHandler} autoComplete="off">
         <br />
         <input
           type="text"
@@ -33,7 +33,7 @@ const LoginInput = ({ login, error }) => {
 
         <br />
 
-        <input className="registerBtn" type="submit" value="Login" />
+        <input className="reg isterBtn" type="submit" value="Login" />
       </form>
       <div className="regAccount">
         <p>Dont have a account?</p>

@@ -35,7 +35,7 @@ function App() {
             path="/"
             element={<LoginInput login={login} error={error} />}
           />
-          <Route path="signUp" element={<RegisterInput />} />
+          <Route path="signUp" element={<RegisterInput login={login} />} />
         </Routes>
       )}
     </div>
