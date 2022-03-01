@@ -19,7 +19,7 @@ const RegisterInput = ({ login, error }) => {
   const inputType = visible ? "text" : "password";
   return (
     <div className="register-form">
-      <form onSubmit={submitHandler}>
+      <form onSubmit={submitHandler} autoComplete="off">
         <input
           type="text"
           name="email"
