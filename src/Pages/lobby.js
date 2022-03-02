@@ -39,7 +39,7 @@ const Lobby = () => {
     <div className="container">
       <div className="header"></div>
       <div className="sidebar">
-        <Sidebar onClick={setSideBarState} />
+        <Sidebar salimovic={setSideBarState} />
       </div>
 
       {showInfoBar()}
