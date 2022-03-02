@@ -22,22 +22,13 @@ function App() {
   };
   return (
     <div className="App">
-      {user.email != "" ? (
-        <div>
-          <h3>
-            Welcome, <span>{user.name}</span>
-          </h3>
-        </div>
-      ) : (
+      {
         <Routes>
           <Route path="lobby" element={<Lobby />} />
-          <Route
-            path="/"
-            element={<LoginInput login={login} error={error} />}
-          />
+          <Route path="/" element={<LoginInput login={login} />} />
           <Route path="signUp" element={<RegisterInput login={login} />} />
         </Routes>
-      )}
+      }
     </div>
   );
 }

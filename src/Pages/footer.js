@@ -14,9 +14,7 @@ const Footer = (props) => {
           <div className="weaponmini">
             <img src={confirmedWeapon && confirmedWeapon.image} alt="" />
           </div>
-          <div className="mapmini">
-            <img src={confirmedWeapon && confirmedWeapon.image} alt="" />
-          </div>
+          <div className="mapsmini"></div>
         </div>
       </div>
 
