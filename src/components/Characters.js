@@ -1,11 +1,16 @@
 import React from "react";
 
 const OneCharacter = (props) => {
-  const { image, id, select } = props;
+  const { oneAvatar, select } = props;
   return (
     <div className="charContainer">
       <div className="c1">
-        <img className="img-c1" onClick={() => select(id)} src={image} alt="" />
+        <img
+          className="img-c1"
+          onClick={() => select(oneAvatar)}
+          src={oneAvatar.image}
+          alt=""
+        />
       </div>
     </div>
   );

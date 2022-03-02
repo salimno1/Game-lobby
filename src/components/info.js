@@ -5,7 +5,7 @@ const Info = (props) => {
   const { avatars, selectAvatar } = props;
 
   const avatarList = avatars.map((avatar) => (
-    <OneCharacter image={avatar.image} select={selectAvatar} id={avatar.id} />
+    <OneCharacter select={selectAvatar} oneAvatar={avatar} />
   ));
   return <div className="infoContent">{avatarList}</div>;
 };

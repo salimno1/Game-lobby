@@ -5,12 +5,7 @@ const ArsenalSite = (props) => {
   const { selectedWeapon, weapons } = props;
 
   const weaponList = weapons.map((weapon) => (
-    <WeaponShow
-      image={weapon.image}
-      onClick={() => selectedWeapon(weapon.id)}
-      select={selectedWeapon}
-      id={weapon.id}
-    />
+    <WeaponShow weapon={weapon} select={selectedWeapon} />
   ));
 
   return <div className="infoContentW">{weaponList}</div>;

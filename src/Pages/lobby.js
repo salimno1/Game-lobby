@@ -12,22 +12,26 @@ import { weapons } from "./weapons";
 
 const Lobby = () => {
   const [sideBarState, setSideBarState] = useState(1);
-  const [selectedCharacter, setSelectedCharacter] = useState(1);
+  const [selectedCharacter, setSelectedCharacter] = useState();
   const [selectedWeapon, setSelectedWeapon] = useState();
+  const [confirmedCharacter, setConfirmedCharacter] = useState();
 
   const showInfoBar = () => {
     if (sideBarState === 1) {
       return (
         <div className="info">
           <Info avatars={avatars} selectAvatar={setSelectedCharacter} />
-          <Background selectedSoldier={selectedCharacter} avatars={avatars} />
+          <Background
+            selectedSoldier={selectedCharacter}
+            confirm={setConfirmedCharacter}
+          />
         </div>
       );
     } else if (sideBarState === 2) {
       return (
         <div className="info">
           <ArsenalSite weapons={weapons} selectedWeapon={setSelectedWeapon} />
-          <div>okej</div>
+          <div>{selectedWeapon && selectedWeapon.accuracy}</div>
         </div>
       );
     } else {
@@ -44,8 +48,7 @@ const Lobby = () => {
 
       {showInfoBar()}
 
-      <Footer selectedSoldier={selectedCharacter} avatars={avatars} />
-      <ReactAudioPlayer src={sound} autoPlay loop volume={0.5} />
+      <Footer selectedSoldier={confirmedCharacter} />
     </div>
   );
 };

@@ -2,14 +2,14 @@ import React, { useState } from "react";
 
 const Footer = (props) => {
   const { selectedSoldier, avatars } = props;
-  const soldier =
-    selectedSoldier && avatars.find((item) => item.id == selectedSoldier);
-
+  if (!selectedSoldier) {
+    return null;
+  }
   return (
     <div className="footerContainer">
       <div className="userfooter"></div>
       <div className="selectedFooter">
-        <img src={soldier.image} alt="" />
+        <img src={selectedSoldier.image} alt="" />
       </div>
       <div className="gameFooter"></div>
     </div>
