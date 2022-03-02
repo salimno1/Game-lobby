@@ -150,6 +150,11 @@ a {
 .weapon :hover {
   border: 1px solid #ffffff;
 }
+
+.Wdetails {
+  padding-top: 75px;
+  margin-left: 50px;
+}
 .character {
   height: 20%;
   width: 90%;
@@ -240,10 +245,25 @@ a {
   text-align: left;
 }
 .story h3,
+h2,
 h5 {
   color: #f5f5f5;
   text-align: left;
   margin: 0;
+  margin-bottom: 2px;
+}
+.Wdetails h3,
+h2,
+h5 {
+  color: #f5f5f5;
+  text-align: center;
+
+  margin-bottom: 2px;
+}
+.Wdetails h5 {
+  color: #f5f5f5a4;
+  text-align: left;
+
   margin-bottom: 2px;
 }
 .story p {
@@ -252,18 +272,20 @@ h5 {
   margin: 0;
   margin-bottom: 10px;
 }
+
 .header {
   grid-area: header;
 }
 
 .footer {
   border: #ffffff solid 1px;
-  height: 80px;
+  height: 50px;
 }
 .footerContainer {
   grid-area: footer;
   display: flex;
   justify-content: space-between;
+  height: 50px;
   padding-left: 50px;
   padding-right: 50px;
 }
@@ -273,15 +295,42 @@ h5 {
   background-color: #61dafb;
 }
 .selectedFooter {
-  width: 40px;
-  height: 40px;
+  width: 150px;
+  height: 50px;
 
-  background-color: #f5f5f588;
   padding: 5px;
-  border: 2px solid rgba(1, 138, 53, 0.918);
 }
 .selectedFooter img {
   width: 40px;
+}
+.fcontainer {
+  display: flex;
+  justify-content: center;
+}
+.fcontainer img {
+  width: 50px;
+  height: 50px;
+}
+.soldiermini {
+  background-color: #ffffff91;
+  margin-right: 5px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+}
+.weaponmini {
+  background-color: #ffffff91;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+}
+.mapmini {
+  background-color: #ffffff91;
+  margin-left: 5px;
+  padding: 2px;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
 }
 .gameFooter {
   width: 150px;

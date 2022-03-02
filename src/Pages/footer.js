@@ -1,16 +1,25 @@
 import React, { useState } from "react";
 
 const Footer = (props) => {
-  const { selectedSoldier, avatars } = props;
-  if (!selectedSoldier) {
-    return null;
-  }
+  const { selectedSoldier, confirmedWeapon } = props;
+
   return (
     <div className="footerContainer">
       <div className="userfooter"></div>
       <div className="selectedFooter">
-        <img src={selectedSoldier.image} alt="" />
+        <div className="fcontainer">
+          <div className="soldiermini">
+            <img src={selectedSoldier && selectedSoldier.image} alt="" />
+          </div>
+          <div className="weaponmini">
+            <img src={confirmedWeapon && confirmedWeapon.image} alt="" />
+          </div>
+          <div className="mapmini">
+            <img src={confirmedWeapon && confirmedWeapon.image} alt="" />
+          </div>
+        </div>
       </div>
+
       <div className="gameFooter"></div>
     </div>
   );

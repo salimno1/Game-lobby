@@ -9,12 +9,14 @@ import Addbtn from "../components/addbutton";
 import Footer from "./footer";
 import ArsenalSite from "./arsenal";
 import { weapons } from "./weapons";
+import WeaponDetail from "../components/weaponDetail";
 
 const Lobby = () => {
-  const [sideBarState, setSideBarState] = useState(1);
+  const [sideBarState, setSideBarState] = useState(0);
   const [selectedCharacter, setSelectedCharacter] = useState();
   const [selectedWeapon, setSelectedWeapon] = useState();
   const [confirmedCharacter, setConfirmedCharacter] = useState();
+  const [confirmedWeapon, setConfirmedWeapon] = useState();
 
   const showInfoBar = () => {
     if (sideBarState === 1) {
@@ -30,8 +32,13 @@ const Lobby = () => {
     } else if (sideBarState === 2) {
       return (
         <div className="info">
-          <ArsenalSite weapons={weapons} selectedWeapon={setSelectedWeapon} />
-          <div>{selectedWeapon && selectedWeapon.accuracy}</div>
+          <div style={{ display: "flex" }}>
+            <ArsenalSite weapons={weapons} selectedWeapon={setSelectedWeapon} />
+            <WeaponDetail
+              selectedWeapon={selectedWeapon}
+              setConfirmedWeapon={setConfirmedWeapon}
+            />
+          </div>
         </div>
       );
     } else {
@@ -48,7 +55,11 @@ const Lobby = () => {
 
       {showInfoBar()}
 
-      <Footer selectedSoldier={confirmedCharacter} />
+      <Footer
+        selectedSoldier={confirmedCharacter}
+        confirmedWeapon={confirmedWeapon}
+      />
+      <ReactAudioPlayer src={sound} autoPlay loop volume={0.01} />
     </div>
   );
 };
