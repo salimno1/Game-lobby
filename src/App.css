@@ -249,7 +249,7 @@ h2,
 h5 {
   color: #f5f5f5;
   text-align: left;
-  margin: 0;
+
   margin-bottom: 2px;
 }
 .Wdetails h3,
@@ -261,14 +261,14 @@ h5 {
   margin-bottom: 2px;
 }
 .Wdetails h5 {
-  color: #f5f5f5a4;
+  color: #f5f5f5;
   text-align: left;
 
   margin-bottom: 2px;
 }
 .story p {
   color: #e0e0e0b6;
-  text-align: left;
+  text-align: center;
   margin: 0;
   margin-bottom: 10px;
 }

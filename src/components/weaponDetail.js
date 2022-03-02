@@ -41,7 +41,7 @@ const WeaponDetail = (props) => {
         width="250px"
         animateOnRender={true}
         maxCompleted={100}
-        bgColor="#141414;"
+        bgColor="black"
         borderRadius="0px"
         baseBgColor="#f5f5f5a4"
         transitionDuration="0.2s"

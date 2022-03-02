@@ -12,7 +12,7 @@ import { weapons } from "./weapons";
 import WeaponDetail from "../components/weaponDetail";
 
 const Lobby = () => {
-  const [sideBarState, setSideBarState] = useState(0);
+  const [sideBarState, setSideBarState] = useState(1);
   const [selectedCharacter, setSelectedCharacter] = useState();
   const [selectedWeapon, setSelectedWeapon] = useState();
   const [confirmedCharacter, setConfirmedCharacter] = useState();
