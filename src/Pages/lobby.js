@@ -7,10 +7,13 @@ import Background from "../components/story";
 import { avatars } from "./avatar";
 import Addbtn from "../components/addbutton";
 import Footer from "./footer";
+import ArsenalSite from "./arsenal";
+import { weapons } from "./weapons";
 
 const Lobby = () => {
   const [sideBarState, setSideBarState] = useState(1);
-  const [selectedCharacter, setSelectedCharacter] = useState(3);
+  const [selectedCharacter, setSelectedCharacter] = useState(1);
+  const [selectedWeapon, setSelectedWeapon] = useState();
 
   const showInfoBar = () => {
     if (sideBarState === 1) {
@@ -21,7 +24,12 @@ const Lobby = () => {
         </div>
       );
     } else if (sideBarState === 2) {
-      return <div className="info">vapen</div>;
+      return (
+        <div className="info">
+          <ArsenalSite weapons={weapons} selectedWeapon={setSelectedWeapon} />
+          <div>okej</div>
+        </div>
+      );
     } else {
       return <div className="info">map</div>;
     }

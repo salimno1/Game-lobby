@@ -16,6 +16,9 @@
   }
 }
 
+input:focus {
+  outline: none !important;
+}
 h3 {
   font-family: "Courier New", Courier, monospace;
   color: rgb(255, 255, 255);
@@ -173,11 +176,22 @@ a {
   width: 100%;
   border-bottom: #680000 solid 2px;
 }
+.img-c2 {
+  height: 120px;
+  width: 90%;
+}
 .c1::after {
   border-bottom: #ffffff solid 1px;
 }
 .c1 :hover {
   border-bottom: #ffffff solid 1px;
+}
+.c2 {
+}
+
+.c2 :hover {
+  background-color: #ffffff60;
+  border-radius: 10px;
 }
 .info {
   grid-area: info;
@@ -189,11 +203,30 @@ a {
   height: 500px;
   flex-direction: column;
 }
+.infoW {
+  grid-area: info;
+  background-color: #0000008f;
+  margin-top: 50px;
+  border-radius: 20px;
+  width: 900px;
+  display: flex;
+  height: 500px;
+  flex-direction: row;
+}
 .infoContent {
   display: flex;
   flex-direction: row;
   padding: 50px;
   height: 200px;
+}
+.infoContentW {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-top: 50px;
+  padding-left: 50px;
+  width: 50%;
+  height: 350px;
 }
 .story {
   height: 100%;
@@ -247,7 +280,7 @@ h5 {
 
   background-color: #f5f5f588;
   padding: 5px;
-  border: 1px solid rgba(0, 255, 98, 0.918);
+  border: 2px solid rgba(1, 138, 53, 0.918);
 }
 .selectedFooter img {
   width: 40px;
