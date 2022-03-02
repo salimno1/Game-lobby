@@ -33,12 +33,13 @@ const LoginInput = ({ login, error }) => {
 
         <br />
 
-        <input className="registerBtn" type="submit" value="Login" />
+        <Link to={"lobby"}>
+          <input className="registerBtn" type="submit" value="Login" />
+        </Link>
       </form>
       <div className="regAccount">
         <p>Dont have a account?</p>
         <Link to={"signUp"}>Sign up here!</Link>
-        <Link to={"lobby"}>Lobby</Link>
       </div>
     </div>
   );
