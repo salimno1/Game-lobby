@@ -2,8 +2,10 @@ import React from "react";
 import c3 from "../img/c3.gif";
 const Background = (props) => {
   const { selectedSoldier, avatars } = props;
-  const soldier =
-    selectedSoldier && avatars.find((item) => item.id == selectedSoldier);
+  const soldier = avatars.find((avatar) => {
+    return avatar.id == selectedSoldier;
+  });
+
   return (
     <div className="story">
       <div className="soldierPic">
