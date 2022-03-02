@@ -175,7 +175,6 @@ a {
 }
 
 .Wdetails {
-  padding-top: 75px;
   margin-left: 50px;
 }
 .character {
@@ -216,7 +215,7 @@ a {
 }
 
 .c2 :hover {
-  background-color: #ffffff60;
+  background-color: #eb8500a4;
   border-radius: 10px;
 }
 .info {

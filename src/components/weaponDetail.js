@@ -17,9 +17,9 @@ const WeaponDetail = (props) => {
         width="250px"
         animateOnRender={true}
         maxCompleted={100}
-        bgColor="black"
+        bgColor="#eb8500e7"
         borderRadius="0px"
-        baseBgColor="#f5f5f5a4"
+        baseBgColor="black"
         transitionDuration="0.2s"
         height="10px"
       />
@@ -29,9 +29,9 @@ const WeaponDetail = (props) => {
         width="250px"
         animateOnRender={true}
         maxCompleted={100}
-        bgColor="black"
+        bgColor="#eb8500e7"
         borderRadius="0px"
-        baseBgColor="#f5f5f5a4"
+        baseBgColor="black"
         transitionDuration="0.2s"
         height="10px"
       />
@@ -41,9 +41,9 @@ const WeaponDetail = (props) => {
         width="250px"
         animateOnRender={true}
         maxCompleted={100}
-        bgColor="black"
+        bgColor="#eb8500e7"
         borderRadius="0px"
-        baseBgColor="#f5f5f5a4"
+        baseBgColor="black"
         transitionDuration="0.2s"
         height="10px"
       />
@@ -53,9 +53,9 @@ const WeaponDetail = (props) => {
         width="250px"
         animateOnRender={true}
         maxCompleted={100}
-        bgColor="black"
+        bgColor="#eb8500e7"
         borderRadius="0px"
-        baseBgColor="#f5f5f5a4"
+        baseBgColor="black"
         transitionDuration="0.2s"
         height="10px"
       />
@@ -65,9 +65,9 @@ const WeaponDetail = (props) => {
         width="250px"
         animateOnRender={true}
         maxCompleted={100}
-        bgColor="black"
+        bgColor="#eb8500e7"
         borderRadius="0px"
-        baseBgColor="#f5f5f5a4"
+        baseBgColor="black"
         transitionDuration="0.2s"
         height="10px"
       />
@@ -77,9 +77,9 @@ const WeaponDetail = (props) => {
         width="250px"
         animateOnRender={true}
         maxCompleted={100}
-        bgColor="black"
+        bgColor="#eb8500e7"
         borderRadius="0px"
-        baseBgColor="#f5f5f5a4"
+        baseBgColor="black"
         transitionDuration="0.2s"
         height="10px"
       />
