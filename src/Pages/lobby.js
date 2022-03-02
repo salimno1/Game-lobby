@@ -10,9 +10,10 @@ import Footer from "./footer";
 import ArsenalSite from "./arsenal";
 import { weapons } from "./weapons";
 import WeaponDetail from "../components/weaponDetail";
+import StartSide from "./startSide";
 
 const Lobby = () => {
-  const [sideBarState, setSideBarState] = useState(1);
+  const [sideBarState, setSideBarState] = useState();
   const [selectedCharacter, setSelectedCharacter] = useState();
   const [selectedWeapon, setSelectedWeapon] = useState();
   const [confirmedCharacter, setConfirmedCharacter] = useState();
@@ -41,8 +42,14 @@ const Lobby = () => {
           </div>
         </div>
       );
-    } else {
+    } else if (sideBarState == 3) {
       return <div className="info">map</div>;
+    } else {
+      return (
+        <div className="infos">
+          <StartSide />
+        </div>
+      );
     }
   };
 
