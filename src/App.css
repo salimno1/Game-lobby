@@ -94,6 +94,7 @@ a {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: auto;
+  border: 1px solid #eb8500a4;
   grid-template-areas:
     "header header header header"
     "sidebar info info info "
@@ -334,7 +335,7 @@ h5 {
   background-color: #eb8500a4;
   display: flex;
   justify-content: space-between;
-  height: 60px;
+  align-items: center;
 }
 .userfooter {
   width: 250px;
