@@ -84,8 +84,11 @@ const WeaponDetail = (props) => {
         height="10px"
       />
       <div>
-        <button onClick={() => setConfirmedWeapon(selectedWeapon)}>
-          click
+        <button
+          className="btnWeapon"
+          onClick={() => setConfirmedWeapon(selectedWeapon)}
+        >
+          Pick Weapon
         </button>
       </div>
     </div>

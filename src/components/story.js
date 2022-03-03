@@ -19,7 +19,9 @@ const Background = (props) => {
         <h5>Perk: </h5>
         <p>{selectedSoldier.skill}</p>
       </div>
-      <button onClick={() => confirm(selectedSoldier)}>Click</button>
+      <button className="btnSoldier" onClick={() => confirm(selectedSoldier)}>
+        Pick Soldier
+      </button>
     </div>
   );
 };
