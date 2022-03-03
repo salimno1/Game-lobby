@@ -11,7 +11,7 @@ const WeaponDetail = (props) => {
     <div className="Wdetails">
       <h2>{selectedWeapon.name}</h2>
       <h3>{selectedWeapon.type}</h3>
-      <h5>accuracy</h5>
+      <h5>Accuracy</h5>
       <ProgressBar
         completed={selectedWeapon.accuracy}
         width="250px"
@@ -23,7 +23,7 @@ const WeaponDetail = (props) => {
         transitionDuration="0.2s"
         height="10px"
       />
-      <h5>accuracy</h5>
+      <h5>Damage</h5>
       <ProgressBar
         completed={selectedWeapon.damage}
         width="250px"
@@ -35,7 +35,7 @@ const WeaponDetail = (props) => {
         transitionDuration="0.2s"
         height="10px"
       />
-      <h5>accuracy</h5>
+      <h5>Range</h5>
       <ProgressBar
         completed={selectedWeapon.range}
         width="250px"
@@ -47,7 +47,7 @@ const WeaponDetail = (props) => {
         transitionDuration="0.2s"
         height="10px"
       />
-      <h5>accuracy</h5>
+      <h5>Fire Rate</h5>
       <ProgressBar
         completed={selectedWeapon.fireRate}
         width="250px"
@@ -59,7 +59,7 @@ const WeaponDetail = (props) => {
         transitionDuration="0.2s"
         height="10px"
       />
-      <h5>accuracy</h5>
+      <h5>Mobility</h5>
       <ProgressBar
         completed={selectedWeapon.mobility}
         width="250px"
@@ -71,7 +71,7 @@ const WeaponDetail = (props) => {
         transitionDuration="0.2s"
         height="10px"
       />
-      <h5>accuracy</h5>
+      <h5>Control</h5>
       <ProgressBar
         completed={selectedWeapon.control}
         width="250px"
