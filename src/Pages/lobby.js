@@ -59,14 +59,12 @@ const Lobby = () => {
       <div className="sidebar">
         <Sidebar salimovic={setSideBarState} />
       </div>
-
       {showInfoBar()}
-
       <Footer
         selectedSoldier={confirmedCharacter}
         confirmedWeapon={confirmedWeapon}
-      />
-      <ReactAudioPlayer src={sound} autoPlay loop volume={0.01} />
+      />{" "}
+      <ReactAudioPlayer src={sound} autoPlay loop volume={0.1} />
     </div>
   );
 };

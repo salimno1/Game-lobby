@@ -7,7 +7,7 @@ import c6 from "../img/c8.gif";
 
 export const avatars = [
   {
-    name: "Daniel Ivarsson",
+    name: "Charlie Rolander Tugavune",
     image: c1,
     id: "1",
     country: "Sweden",
