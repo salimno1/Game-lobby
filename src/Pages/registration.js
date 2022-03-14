@@ -41,7 +41,7 @@ const RegisterInput = ({ login, error }) => {
       errors.password = "Password is required!";
     }
     if (!values.password2) {
-      errors.password2 = "Password2 is required!";
+      errors.password2 = "Password is required!";
     }
     return errors;
   };
