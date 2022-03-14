@@ -61,7 +61,7 @@ const RegisterInput = ({ login, error }) => {
           required
         />
         <p>{formErrors.email}</p>
-        <br />
+
         <input
           type="text"
           name="username"
@@ -71,7 +71,6 @@ const RegisterInput = ({ login, error }) => {
           required
         />
         <p>{formErrors.name}</p>
-        <br />
 
         <input
           type={inputType}
@@ -82,7 +81,7 @@ const RegisterInput = ({ login, error }) => {
           required
         />
         <p>{formErrors.password}</p>
-        <br />
+
         <input
           type={inputType}
           name="password2"
@@ -93,7 +92,7 @@ const RegisterInput = ({ login, error }) => {
           value={details.password2}
         />
         <p>{formErrors.password2}</p>
-        <br />
+
         <span
           className="password-icon2"
           onClick={() => setVisibility(!visible)}

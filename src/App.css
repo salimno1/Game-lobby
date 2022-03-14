@@ -44,6 +44,12 @@ input {
 form {
   margin-top: 100px;
 }
+.register-form p {
+  font-size: x-small;
+  color: rgb(255, 166, 0);
+  text-align: left;
+  margin-left: 50px;
+}
 .register-form {
   padding-top: 50px;
   height: 500px;
