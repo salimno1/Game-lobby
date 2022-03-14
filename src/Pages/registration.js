@@ -1,5 +1,5 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { AiFillEyeInvisible, AiFillEye } from "react-icons/ai";
 import { Link } from "react-router-dom";
 
@@ -11,15 +11,46 @@ const RegisterInput = ({ login, error }) => {
     email: "",
   });
 
+  const [formErrors, setFormErrors] = useState({});
+  const [isSubmit, setIsSubmit] = useState(false);
   const submitHandler = (e) => {
     e.preventDefault();
     login(details);
+    setFormErrors(validate(details));
+    setIsSubmit(true);
+  };
+
+  useEffect(() => {
+    console.log(formErrors);
+    if (Object.keys(formErrors).length === 0 && isSubmit) {
+      console.log(details);
+    }
+  }, [formErrors]);
+  const validate = (values) => {
+    const errors = {};
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!values.name) {
+      errors.name = "Username is required!";
+    }
+    if (!values.email) {
+      errors.email = "Email is required!";
+    } else if (!regex.test(values.email)) {
+      errors.email = "Email is not valid";
+    }
+    if (!values.password) {
+      errors.password = "Password is required!";
+    }
+    if (!values.password2) {
+      errors.password2 = "Password2 is required!";
+    }
+    return errors;
   };
   const [visible, setVisibility] = useState(false);
 
   const inputType = visible ? "text" : "password";
   return (
     <div className="register-form">
+      <div></div>
       <form onSubmit={submitHandler} autoComplete="off">
         <input
           type="text"
@@ -29,6 +60,7 @@ const RegisterInput = ({ login, error }) => {
           value={details.email}
           required
         />
+        <p>{formErrors.email}</p>
         <br />
         <input
           type="text"
@@ -38,6 +70,7 @@ const RegisterInput = ({ login, error }) => {
           value={details.name}
           required
         />
+        <p>{formErrors.name}</p>
         <br />
 
         <input
@@ -48,6 +81,7 @@ const RegisterInput = ({ login, error }) => {
           value={details.password}
           required
         />
+        <p>{formErrors.password}</p>
         <br />
         <input
           type={inputType}
@@ -58,6 +92,7 @@ const RegisterInput = ({ login, error }) => {
           }
           value={details.password2}
         />
+        <p>{formErrors.password2}</p>
         <br />
         <span
           className="password-icon2"
