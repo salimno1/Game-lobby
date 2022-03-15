@@ -10,8 +10,8 @@ import {
   useNavigate,
 } from "react-router-dom";
 
-const RegisterInput = ({ login, admin }) => {
-  let history = useNavigate();
+const RegisterInput = ({ admin }) => {
+  let navigate = useNavigate();
   const [regdetails, setRegDetails] = useState({
     name: "",
     password: "",
@@ -28,7 +28,8 @@ const RegisterInput = ({ login, admin }) => {
     setIsSubmit(true);
     admin = regdetails;
     console.log(admin);
-    history("/");
+
+    navigate("/");
   };
 
   useEffect(() => {

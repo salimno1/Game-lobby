@@ -10,12 +10,13 @@ import {
 } from "react-router-dom";
 
 const LoginInput = ({ login, error, adminUser }) => {
-  let history = useNavigate();
+  let navigate = useNavigate();
   const [details, setDetails] = useState({ name: "", password: "" });
   const submitHandler = (e) => {
     e.preventDefault();
     login(details);
     console.log(adminUser);
+    navigate("lobby");
   };
   return (
     <div className="register-form">

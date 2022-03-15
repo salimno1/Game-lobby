@@ -8,8 +8,8 @@ import Lobby from "./Pages/lobby";
 
 function App() {
   const adminUser = {};
-  const [user, setUser] = useState({ name: "Salim" });
-  const [error, setError] = useState("");
+  const [user, setUser] = useState({ name: "" });
+
   const login = (details) => {
     console.log(adminUser);
     console.log(details);
