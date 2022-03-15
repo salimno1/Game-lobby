@@ -1,12 +1,21 @@
 import React, { useState } from "react";
 import Soundish from "../sound";
-import { Link } from "react-router-dom";
 
-const LoginInput = ({ login, error }) => {
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  Link,
+  useNavigate,
+} from "react-router-dom";
+
+const LoginInput = ({ login, error, adminUser }) => {
+  let history = useNavigate();
   const [details, setDetails] = useState({ name: "", password: "" });
   const submitHandler = (e) => {
     e.preventDefault();
     login(details);
+    console.log(adminUser);
   };
   return (
     <div className="register-form">
@@ -38,7 +47,6 @@ const LoginInput = ({ login, error }) => {
       <div className="regAccount">
         <p>Dont have a account?</p>
         <Link to={"signUp"}>Sign up here!</Link>
-        <Link to={"lobby"}>Lobby</Link>
       </div>
     </div>
   );

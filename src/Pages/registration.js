@@ -1,10 +1,18 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { AiFillEyeInvisible, AiFillEye } from "react-icons/ai";
-import { Link } from "react-router-dom";
 
-const RegisterInput = ({ login, error }) => {
-  const [details, setDetails] = useState({
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  Link,
+  useNavigate,
+} from "react-router-dom";
+
+const RegisterInput = ({ login, admin }) => {
+  let history = useNavigate();
+  const [regdetails, setRegDetails] = useState({
     name: "",
     password: "",
     password2: "",
@@ -15,15 +23,18 @@ const RegisterInput = ({ login, error }) => {
   const [isSubmit, setIsSubmit] = useState(false);
   const submitHandler = (e) => {
     e.preventDefault();
-    login(details);
-    setFormErrors(validate(details));
+
+    setFormErrors(validate(regdetails));
     setIsSubmit(true);
+    admin = regdetails;
+    console.log(admin);
+    history("/");
   };
 
   useEffect(() => {
     console.log(formErrors);
     if (Object.keys(formErrors).length === 0 && isSubmit) {
-      console.log(details);
+      console.log(regdetails);
     }
   }, [formErrors]);
   const validate = (values) => {
@@ -42,6 +53,8 @@ const RegisterInput = ({ login, error }) => {
     }
     if (!values.password2) {
       errors.password2 = "Password is required!";
+    } else if (values.password2 != values.password) {
+      errors.password2 = "password do not match!";
     }
     return errors;
   };
@@ -56,8 +69,10 @@ const RegisterInput = ({ login, error }) => {
           type="text"
           name="email"
           placeholder="Email*"
-          onChange={(e) => setDetails({ ...details, email: e.target.value })}
-          value={details.email}
+          onChange={(e) =>
+            setRegDetails({ ...regdetails, email: e.target.value })
+          }
+          value={regdetails.email}
           required
         />
         <p>{formErrors.email}</p>
@@ -66,8 +81,10 @@ const RegisterInput = ({ login, error }) => {
           type="text"
           name="username"
           placeholder="Username*"
-          onChange={(e) => setDetails({ ...details, name: e.target.value })}
-          value={details.name}
+          onChange={(e) =>
+            setRegDetails({ ...regdetails, name: e.target.value })
+          }
+          value={regdetails.name}
           required
         />
         <p>{formErrors.name}</p>
@@ -76,8 +93,10 @@ const RegisterInput = ({ login, error }) => {
           type={inputType}
           name="password"
           placeholder="Password*"
-          onChange={(e) => setDetails({ ...details, password: e.target.value })}
-          value={details.password}
+          onChange={(e) =>
+            setRegDetails({ ...regdetails, password: e.target.value })
+          }
+          value={regdetails.password}
           required
         />
         <p>{formErrors.password}</p>
@@ -87,9 +106,9 @@ const RegisterInput = ({ login, error }) => {
           name="password2"
           placeholder="Repeat Password*"
           onChange={(e) =>
-            setDetails({ ...details, password2: e.target.value })
+            setRegDetails({ ...regdetails, password2: e.target.value })
           }
-          value={details.password2}
+          value={regdetails.password2}
         />
         <p>{formErrors.password2}</p>
 

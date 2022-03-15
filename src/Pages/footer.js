@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 const Footer = (props) => {
-  const { selectedSoldier, confirmedWeapon } = props;
+  const { selectedSoldier, confirmedWeapon, user } = props;
 
   return (
     <div className="footerContainer">

@@ -7,14 +7,21 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Lobby from "./Pages/lobby";
 
 function App() {
-  const adminUser = {
-    email: "",
-    password: "",
-  };
-  const [user, serUser] = useState({ name: "", email: "" });
+  const adminUser = {};
+  const [user, setUser] = useState({ name: "Salim" });
   const [error, setError] = useState("");
   const login = (details) => {
+    console.log(adminUser);
     console.log(details);
+    if (
+      details.name == adminUser.name &&
+      details.password == adminUser.password
+    ) {
+      console.log("logged in");
+      setUser({ name: details.name });
+    } else {
+      console.log("wrong password");
+    }
   };
 
   const Logout = () => {
@@ -25,8 +32,14 @@ function App() {
       {
         <Routes>
           <Route path="lobby" element={<Lobby />} />
-          <Route path="/" element={<LoginInput login={login} />} />
-          <Route path="signUp" element={<RegisterInput login={login} />} />
+          <Route
+            path="/"
+            element={<LoginInput login={login} admin={adminUser} />}
+          />
+          <Route
+            path="signUp"
+            element={<RegisterInput login={login} admin={adminUser} />}
+          />
         </Routes>
       }
     </div>
