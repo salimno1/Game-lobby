@@ -54,7 +54,7 @@ const RegisterInput = ({ admin, realAdmin }) => {
     if (!values.name) {
       errors.name = "Username is required!";
     } else if (!usernameRegex.test(values.name)) {
-      errors.name = "username wrong";
+      errors.name = "No symbols allowed!";
     }
 
     if (!values.email) {
