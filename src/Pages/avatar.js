@@ -22,10 +22,10 @@ export const avatars = [
     skill: "Fast runner",
   },
   {
-    name: "Andrei Abramovic",
+    name: "Oleksandr Yarmolenko",
     image: c4,
     id: "3",
-    country: "Russia",
+    country: "Ukraine",
 
     skill: "Extra armor",
   },

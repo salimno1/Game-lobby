@@ -29,6 +29,8 @@ const LoginInput = ({ admin, realAdmin }) => {
 
     if (isLoggedIn) {
       navigate("/lobby");
+    } else {
+      alert("Username or password is wrong");
     }
   };
 

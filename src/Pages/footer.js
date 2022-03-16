@@ -1,11 +1,20 @@
 import React, { useState } from "react";
+import pPic from "../img/profilepic.gif";
 
 const Footer = (props) => {
-  const { selectedSoldier, confirmedWeapon, user } = props;
+  const { selectedSoldier, confirmedWeapon, adminUser } = props;
 
   return (
     <div className="footerContainer">
-      <div className="userfooter"></div>
+      <div className="userfooter">
+        <div className="profilepic">
+          <img src={pPic} alt="" />
+        </div>
+        <div className="username">
+          <h3>{adminUser.name}</h3>
+          <p>Rank 45</p>
+        </div>
+      </div>
       <div className="selectedFooter">
         <div className="fcontainer">
           <div className="soldiermini">

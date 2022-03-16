@@ -12,10 +12,10 @@ import { weapons } from "./weapons";
 import WeaponDetail from "../components/weaponDetail";
 import StartSide from "./startSide";
 
-const Lobby = () => {
+const Lobby = ({ adminUser }) => {
   const [sideBarState, setSideBarState] = useState();
-  const [selectedCharacter, setSelectedCharacter] = useState();
-  const [selectedWeapon, setSelectedWeapon] = useState();
+  const [selectedCharacter, setSelectedCharacter] = useState(avatars[0]);
+  const [selectedWeapon, setSelectedWeapon] = useState(weapons[0]);
   const [confirmedCharacter, setConfirmedCharacter] = useState();
   const [confirmedWeapon, setConfirmedWeapon] = useState();
 
@@ -63,6 +63,7 @@ const Lobby = () => {
       <Footer
         selectedSoldier={confirmedCharacter}
         confirmedWeapon={confirmedWeapon}
+        adminUser={adminUser}
       />{" "}
       <ReactAudioPlayer src={sound} autoPlay loop volume={0.1} />
     </div>
