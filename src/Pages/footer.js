@@ -12,7 +12,6 @@ const Footer = (props) => {
         </div>
         <div className="username">
           <h3>{adminUser.name}</h3>
-          <p>Rank 45</p>
         </div>
       </div>
       <div className="selectedFooter">
@@ -27,7 +26,9 @@ const Footer = (props) => {
         </div>
       </div>
 
-      <div className="gameFooter"></div>
+      <div className="gameFooter">
+        <button className="btnSoldier1">FIND MATCH</button>
+      </div>
     </div>
   );
 };

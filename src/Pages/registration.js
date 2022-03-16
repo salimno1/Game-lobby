@@ -50,9 +50,13 @@ const RegisterInput = ({ admin, realAdmin }) => {
   const validate = (values) => {
     const errors = {};
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    var usernameRegex = /^[a-zA-Z0-9]+$/;
     if (!values.name) {
       errors.name = "Username is required!";
+    } else if (!usernameRegex.test(values.name)) {
+      errors.name = "username wrong";
     }
+
     if (!values.email) {
       errors.email = "Email is required!";
     } else if (!regex.test(values.email)) {
@@ -60,6 +64,8 @@ const RegisterInput = ({ admin, realAdmin }) => {
     }
     if (!values.password) {
       errors.password = "Password is required!";
+    } else if (values.password.length < 8) {
+      errors.password = "Password must be at least 8 character.";
     }
     if (!values.password2) {
       errors.password2 = "Password is required!";

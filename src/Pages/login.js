@@ -36,6 +36,9 @@ const LoginInput = ({ admin, realAdmin }) => {
 
   return (
     <div className="register-form">
+      <div className="validate" style={{ display: "none" }}>
+        salim
+      </div>
       <form onSubmit={submitHandler} autoComplete="off">
         <br />
         <input

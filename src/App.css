@@ -360,14 +360,15 @@ h5 {
 
 .userfooter h3 {
   color: #000000;
+
   margin: 0;
   margin-left: 10px;
-  text-shadow: 1px 0px 1px rgb(253, 253, 253);
+  text-shadow: 0.5px 0px 0px rgba(255, 255, 255, 0.616);
 }
 .userfooter p {
   margin: 0;
   margin-left: 10px;
-  text-shadow: 1px 0 0px rgb(255, 255, 255);
+  text-shadow: 0px 0 3px rgb(0, 0, 0);
 }
 .username {
   height: 40px;
@@ -380,6 +381,7 @@ h5 {
   height: 50px;
   border-radius: 20px;
   margin-left: 25px;
+  border: 1px solid rgb(1, 203, 253);
 }
 .selectedFooter {
   width: 150px;
@@ -420,8 +422,23 @@ h5 {
   border-radius: 5px;
 }
 .gameFooter {
-  width: 150px;
   height: 50px;
+}
+
+.btnSoldier1 {
+  height: 50px;
+
+  width: 100px;
+  margin-right: 20px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0);
+  color: #000000;
+  border: 1px solid #000000d3;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.btnSoldier1:hover {
+  border: 1px solid #ff9900;
+  color: #ff9900;
 }
 
 .App-link {
