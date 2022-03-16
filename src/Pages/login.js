@@ -9,15 +9,29 @@ import {
   useNavigate,
 } from "react-router-dom";
 
-const LoginInput = ({ login, error, adminUser }) => {
+const LoginInput = ({ admin, realAdmin }) => {
   let navigate = useNavigate();
   const [details, setDetails] = useState({ name: "", password: "" });
-  const submitHandler = (e) => {
+  const submitHandler = async (e) => {
     e.preventDefault();
-    login(details);
-    console.log(adminUser);
-    navigate("lobby");
+    const rawResponse = await fetch("http://localhost:3001/login", {
+      method: "POST",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        name: details.name,
+        password: details.password,
+      }),
+    });
+    const isLoggedIn = await rawResponse.json();
+
+    if (isLoggedIn) {
+      navigate("/lobby");
+    }
   };
+
   return (
     <div className="register-form">
       <form onSubmit={submitHandler} autoComplete="off">

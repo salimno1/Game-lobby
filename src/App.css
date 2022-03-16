@@ -79,15 +79,23 @@ form {
   display: flex;
   flex-direction: column;
 }
+
+.regAccount p {
+  color: #ffffffe1;
+  margin-top: 50px;
+  margin-right: 50px;
+  text-align: center;
+  font-size: medium;
+}
 a {
   color: #ffffffe1;
 }
 
 .password-icon2 {
   color: #ffffff;
-  position: absolute;
-  right: 10%;
-  bottom: 50%;
+  position: relative;
+  left: 79%;
+  bottom: 35%;
 }
 
 .container {
@@ -344,8 +352,34 @@ h5 {
   align-items: center;
 }
 .userfooter {
-  width: 250px;
+  display: flex;
+
+  margin-left: 10px;
   height: 50px;
+}
+
+.userfooter h3 {
+  color: #000000;
+  margin: 0;
+  margin-left: 10px;
+  text-shadow: 1px 0px 1px rgb(253, 253, 253);
+}
+.userfooter p {
+  margin: 0;
+  margin-left: 10px;
+  text-shadow: 1px 0 0px rgb(255, 255, 255);
+}
+.username {
+  height: 40px;
+  margin-left: 1px;
+  margin-top: 5px;
+
+  text-align: left;
+}
+.profilepic img {
+  height: 50px;
+  border-radius: 20px;
+  margin-left: 25px;
 }
 .selectedFooter {
   width: 150px;

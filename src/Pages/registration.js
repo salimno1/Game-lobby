@@ -10,32 +10,41 @@ import {
   useNavigate,
 } from "react-router-dom";
 
-const RegisterInput = ({ admin }) => {
+const RegisterInput = ({ admin, realAdmin }) => {
   let navigate = useNavigate();
-  const [regdetails, setRegDetails] = useState({
-    name: "",
-    password: "",
-    password2: "",
-    email: "",
-  });
 
   const [formErrors, setFormErrors] = useState({});
   const [isSubmit, setIsSubmit] = useState(false);
-  const submitHandler = (e) => {
+  const submitHandler = async (e) => {
+    setFormErrors(validate(realAdmin));
+    setIsSubmit(true);
     e.preventDefault();
 
-    setFormErrors(validate(regdetails));
-    setIsSubmit(true);
-    admin = regdetails;
-    console.log(admin);
+    if (Object.keys(formErrors).length === 0 && isSubmit) {
+      const rawResponse = await fetch("http://localhost:3001/createUser", {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: realAdmin.name,
+          email: realAdmin.email,
+          password: realAdmin.password,
+        }),
+      });
+      const isLoggedIn = await rawResponse.json();
 
-    navigate("/");
+      if (isLoggedIn) {
+        navigate("/");
+      }
+    }
   };
 
   useEffect(() => {
     console.log(formErrors);
     if (Object.keys(formErrors).length === 0 && isSubmit) {
-      console.log(regdetails);
+      console.log(realAdmin);
     }
   }, [formErrors]);
   const validate = (values) => {
@@ -59,6 +68,7 @@ const RegisterInput = ({ admin }) => {
     }
     return errors;
   };
+
   const [visible, setVisibility] = useState(false);
 
   const inputType = visible ? "text" : "password";
@@ -70,10 +80,8 @@ const RegisterInput = ({ admin }) => {
           type="text"
           name="email"
           placeholder="Email*"
-          onChange={(e) =>
-            setRegDetails({ ...regdetails, email: e.target.value })
-          }
-          value={regdetails.email}
+          onChange={(e) => admin({ ...realAdmin, email: e.target.value })}
+          value={realAdmin.email}
           required
         />
         <p>{formErrors.email}</p>
@@ -82,10 +90,8 @@ const RegisterInput = ({ admin }) => {
           type="text"
           name="username"
           placeholder="Username*"
-          onChange={(e) =>
-            setRegDetails({ ...regdetails, name: e.target.value })
-          }
-          value={regdetails.name}
+          onChange={(e) => admin({ ...realAdmin, name: e.target.value })}
+          value={realAdmin.name}
           required
         />
         <p>{formErrors.name}</p>
@@ -94,10 +100,8 @@ const RegisterInput = ({ admin }) => {
           type={inputType}
           name="password"
           placeholder="Password*"
-          onChange={(e) =>
-            setRegDetails({ ...regdetails, password: e.target.value })
-          }
-          value={regdetails.password}
+          onChange={(e) => admin({ ...realAdmin, password: e.target.value })}
+          value={realAdmin.password}
           required
         />
         <p>{formErrors.password}</p>
@@ -106,10 +110,8 @@ const RegisterInput = ({ admin }) => {
           type={inputType}
           name="password2"
           placeholder="Repeat Password*"
-          onChange={(e) =>
-            setRegDetails({ ...regdetails, password2: e.target.value })
-          }
-          value={regdetails.password2}
+          onChange={(e) => admin({ ...realAdmin, password2: e.target.value })}
+          value={realAdmin.password2}
         />
         <p>{formErrors.password2}</p>
 
