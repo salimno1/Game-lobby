@@ -25,9 +25,6 @@ To use the application, follow these steps:
 3. Click the "Submit" button.
 4. The application will display a greeting message in the selected color.
 
-Here's a screenshot of the application in action:
-
-![My First React Project Screenshot](/src/assets/screenshot.png)
 
 ## State Management
 
@@ -35,13 +32,5 @@ In this project, I used the React Hooks library for state management. Specifical
 
 ## CSS Design
 
-For CSS design, I used the Bootstrap library to style the user interface. I also added some custom CSS to adjust the styles to my liking. The application has a simple, clean design with a focus on readability and user experience.
+For CSS design I also added some custom CSS to adjust the styles to my liking. The application has a simple, clean design with a focus on readability and user experience.
 
-## Credits
-
-- [React Hooks](https://reactjs.org/docs/hooks-intro.html)
-- [Bootstrap](https://getbootstrap.com/)
-
-## License
-
-This project is licensed under the MIT License.
